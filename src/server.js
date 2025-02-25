@@ -46,7 +46,7 @@ passport.use(
         {
             clientID: process.env.DISCORD_CLIENT_ID,
             clientSecret: process.env.DISCORD_CLIENT_SECRET,
-            callbackURL: "https://glaxy-rp.vercel.app/auth/discord/callback",
+            callbackURL: "https://galaxy-rp.vercel.app/auth/discord/callback",
             scope: ["identify"],
         },
         (accessToken, refreshToken, profile, done) => {
