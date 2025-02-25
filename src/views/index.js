@@ -6,6 +6,18 @@ const path = require("path");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo");
+const { Client, GatewayIntentBits } = require("discord.js");
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildModeration,
+        GatewayIntentBits.GuildPresences,
+        GatewayIntentBits.MessageContent
+    ]
+});
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 
 dotenv.config();
 const app = express();
@@ -83,4 +95,5 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => console.log("Server running on http://localhost:3000"));
 
+client.login(DISCORD_TOKEN);
 module.exports = app;
