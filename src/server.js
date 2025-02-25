@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 app.use(
     session({
-        secret: "super_secret_key",
+        secret: "dqsdqsDSQJfof546fqDd6846#àdsq@dksqIoùdsq21641531dqs4dQSD4dS#.DSQ5@1",
         resave: false,
         saveUninitialized: false,
     })
@@ -35,7 +35,7 @@ passport.use(
         {
             clientID: process.env.DISCORD_CLIENT_ID,
             clientSecret: process.env.DISCORD_CLIENT_SECRET,
-            callbackURL: "http://localhost:3000/auth/discord/callback",
+            callbackURL: "https://discord-login-sand.vercel.app/auth/discord/callback",
             scope: ["identify"],
         },
         (accessToken, refreshToken, profile, done) => {
