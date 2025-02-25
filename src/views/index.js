@@ -95,5 +95,8 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => console.log("Server running on http://localhost:3000"));
 
-client.login(DISCORD_TOKEN);
+client.login(DISCORD_TOKEN).then(() => {
+    console.log("Bot Connected");
+});
+
 module.exports = app;
