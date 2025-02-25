@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "test": "node ."
+    "start": "node src/server.js",
+    "vercel-build": "echo 'No build step required'"
   },
   "keywords": [],
   "author": "",
