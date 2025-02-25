@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <!-- تحميل اللوغو من الجهاز المحلي -->
+        <img src="/images/logo.png" class="navbar-brand logo" width="50px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true" style="color: #fff;"></i>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/boosters">البوست</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" href="javascript:void()">
+                        المتصدرين
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-menu text-right mr-auto" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/leaderboard/7zkblfo">ساعات اللعب</a>
+                            <a class="dropdown-item" href="/leaderboard/7udzh2m">ساعات اللعب لأخر اسبوع</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-auto">
+                <% if (user) { %>
+                    <li class="nav-item">
+                        <img src="<%= user.avatar %>" alt="User Avatar" width="40px" class="rounded-circle">
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">مرحباً, <%= user.username %></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <button class="btn btn-danger">تسجيل الخروج</button>
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/discord">
+                            <button class="btn btn-primary">تسجيل الدخول</button>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>

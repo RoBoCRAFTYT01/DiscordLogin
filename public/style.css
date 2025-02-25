@@ -1,0 +1,213 @@
+:root {
+    --first_color: #2e0d3f;
+    --second_color: #5922bf;
+}
+
+.form-control {
+    height: auto !important;
+}
+
+.add-to-cart {
+    background-color: transparent;
+    border: 1px solid #1a283f;
+    color: #000;
+}
+
+.checkout .btn:hover,
+.add-to-cart:hover {
+    background: #5922bf !important;
+}
+
+.in {
+    background-image: linear-gradient(to top, #2e0d3f 20%, #5922bf 80%);
+}
+
+.linee {
+    background-image: linear-gradient(to top, #2e0d3f 20%, #5922bf 80%);
+    height: 275px;
+    margin-bottom: 45px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    height: 85%;
+}
+
+.curvee {
+    width: 100%;
+    min-height: 150px;
+    text-align: center;
+    background-image: linear-gradient(to top, #2e0d3f 20%, #5922bf 80%);
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    height: 70%;
+}
+
+.Wave {
+    height: 70% !important;
+}
+
+.btn:not(.add-to-cart, .category, .disableColor) {
+    background: #000000;
+    border: none !important;
+}
+
+.done .btn {
+    background: #000000 !important;
+}
+
+.swal2-container,
+.modal {
+    z-index: 9999999999999999999999999999999999999999 !important;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.39) !important;
+}
+
+.footer-big {
+    margin-top: 250px;
+}
+
+.curvee,
+.linee,
+.Wave {
+    display: none;
+}
+
+.curvee {
+    display: block;
+}
+
+.footer-big a {
+    color: #5922bf !important;
+}
+
+.up-breadcrumb {
+    z-index: 1000 !important;
+}
+
+.lead {
+    word-wrap: break-word;
+}
+
+.footer-big .fab,
+.footer-big .fa {
+    color: #333 !important;
+    border: 1px solid #9fa6ad !important;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 17px;
+    width: auto !important;
+    height: auto !important;
+    margin: auto !important;
+}
+
+.footer-big .fab:hover,
+.footer-big .fa:hover {
+    background: #333;
+    color: white !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .products .list-unstyled li,
+    .simailer .list-unstyled li {
+        border: 2px solid black !important;
+        margin: 10px 0 0 1%;
+        color: black;
+    }
+
+    .products .list-unstyled li.active,
+    .products .list-unstyled li:hover,
+    .simailer .list-unstyled li.active,
+    .simailer .list-unstyled li:hover {
+        color: white;
+        background-color: #717171;
+    }
+}
+
+/* ===============================
+       أنماط زر "العب الان" مع تقليل الحجم وعدم حدوث أي تغيير عند مرور الماوس
+       =============================== */
+.play-now-box {
+    background-color: #5922bf;
+    border: 3px solid #5922bf;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 15px 30px;
+    animation: pulse 2s infinite, glow 2s infinite;
+}
+
+.play-now-btn {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* عند مرور الماوس أو التركيز، يبقى المظهر ثابتاً دون ظهور أي مستطيل أو تأثير */
+.play-now-box:hover,
+.play-now-btn:hover,
+.play-now-box:focus,
+.play-now-btn:focus,
+.play-now-box:active,
+.play-now-btn:active {
+    background-color: #5922bf !important;
+    border-color: #5922bf !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transform: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    animation: pulse 2s infinite, glow 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px #fff;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+}
+
+/* نهاية أنماط زر "العب الان" */
+
+/* استثناء لخطوط أيقونات الخط */
+*:not(.fa, i) {
+    font-family: 'Cairo', sans-serif;
+}
+
+.Wave {
+    display: block;
+}

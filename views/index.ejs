@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<%- include('partials/head') %>
+<body class="main">
+    <div class="overlay">
+        <div id="videobg"></div>
+        <%- include('partials/wave') %>
+        <!-- شريط التنقل -->
+        <%- include('partials/nav') %>
+        
+
+        <script src="https://kyn.fra1.cdn.digitaloceanspaces.com/themes/basic/jquery-3.5.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                if ($(window).scrollTop() >= 5) {
+                    $(".navbar").css("background-image", "linear-gradient(to top, #5922bf 100%, #5922bf 100%)");
+                } else {
+                    $(".navbar").css("background-image", "");
+                }
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() >= 5) {
+                        $(".navbar").css("background-image", "linear-gradient(to top, #5922bf 100%, #5922bf 100%)");
+                    } else {
+                        $(".navbar").css("background-image", "");
+                    }
+                });
+                $("svg circle").attr("fill", "#000000");
+            });
+        </script>
+        
+        <!-- أزرار الدخول للسيرفر والسلة -->
+        <%- include('partials/other') %>
+
+        <!-- قسم اللوغو والعنوان الرئيسي -->
+        <%- include('partials/main') %>
+
+        <!-- الفوتر -->
+        <%- include('partials/footer') %>
+
+        <!-- سكريبتات إضافية للموقع -->
+        <%- include('partials/scripts') %>
+
+        <!-- نهاية المحتوى الأساسي -->
+
+    </div>
+</body>
+
+</html>
